@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.Shared", "Market.Shared\Market.Shared.csproj", "{DD5FFB1A-0024-403F-8D2F-4B8969AA076D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.Shared", "Market.Shared\Market.Shared.csproj", "{DD5FFB1A-0024-403F-8D2F-4B8969AA076D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.API", "Market.API\Market.API.csproj", "{47D7E306-E4A7-40D7-ADE1-24F157B15F6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.API", "Market.API\Market.API.csproj", "{47D7E306-E4A7-40D7-ADE1-24F157B15F6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Market.WEB", "Market.WEB\Market.WEB.csproj", "{C2E7503B-FD46-4864-A20A-0BF5E5E601BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.WEB", "Market.WEB\Market.WEB.csproj", "{C2E7503B-FD46-4864-A20A-0BF5E5E601BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maeket.MAUI", "Maeket.MAUI\Maeket.MAUI.csproj", "{C8D2A85D-0227-42C9-866F-0A59A8779708}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maeket.MAUI", "Maeket.MAUI\Maeket.MAUI.csproj", "{C8D2A85D-0227-42C9-866F-0A59A8779708}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
