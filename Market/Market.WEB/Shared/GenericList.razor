@@ -1,6 +1,4 @@
-﻿<h3>GenericList</h3>
-
-@typeparam Titem
+﻿@typeparam Titem
 
 @if (MyList is null)
 {
@@ -19,7 +17,9 @@ else if (MyList.Count == 0)
 {
     @if (NoRecords is null)
     {
+        <div class="align-items-center">
         <p>No hay registros para mostrar...</p>
+        </div>
     }
     else
     {
