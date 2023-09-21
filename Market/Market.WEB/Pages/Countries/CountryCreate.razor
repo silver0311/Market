@@ -6,12 +6,13 @@
 
 <h3>Crear País</h3>
 
-<CountryForm Country="country" OnValidSubmit="Create" ReturnAction="Return" />
+<CountryForm @ref="countryForm" Country="country" OnSubmit="Create" ReturnAction="Return" />
 
 
 @code {
 
     private Country country = new();
+    private CountryForm? countryForm;
 
     private async Task Create()
     {
@@ -22,7 +23,7 @@
             await sweetAlertService.FireAsync("Error", message);
             return;
         }
-
+        countryForm!.FormPostedSuccessfully = true;
         navigationManager.NavigateTo("/countries");
     }
 
