@@ -17,6 +17,7 @@
     <button class="btn btn-success" @onclick="ReturnAction">Regresar</button>
 </EditForm>
 
+
 @code {
     private EditContext editContext = null!;
 
@@ -25,16 +26,16 @@
         editContext = new(Country);
     }
 
-    [EditorRequired]
     [Parameter]
+    [EditorRequired]
     public Country Country { get; set; } = null!;
 
-    [EditorRequired]
     [Parameter]
+    [EditorRequired]
     public EventCallback OnSubmit { get; set; }
 
-    [EditorRequired]
     [Parameter]
+    [EditorRequired]
     public EventCallback ReturnAction { get; set; }
 
     public bool FormPostedSuccessfully { get; set; } = false;
@@ -57,7 +58,7 @@
             {
                 Title = "Confirmación",
                 Text = "¿Deseas abandonar la página y perder los cambios?",
-                Icon = SweetAlertIcon.Warning,
+                Icon = SweetAlertIcon.Question,
                 ShowCancelButton = true
             });
 

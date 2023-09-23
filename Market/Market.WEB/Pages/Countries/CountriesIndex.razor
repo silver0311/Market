@@ -3,19 +3,17 @@
 @inject NavigationManager navigationManager
 @inject SweetAlertService sweetAlertService
 
-
-
 <h3>Paises</h3>
 
-
-
 <div class="mb-3">
-    <a class="btn btn-primary" href="/countries/create">Nuevo País</a>
+    <a class="btn btn-primary mb-3" href="/countries/create">Nuevo País</a>
 </div>
 
 <GenericList MyList="Countries">
     <Loading>
-        <p>Cargando...</p>
+        <div class="align-items-center">
+            <img src=" https://img.pikbest.com/png-images/20190918/cartoon-snail-loading-loading-gif-animation_2734139.png!bw700 " />
+        </div>
     </Loading>
     <Body>
         <table class="table table-striped">
@@ -31,7 +29,7 @@
                     <tr>
                         <td>
                             <a href="/countries/edit/@country.Id" class="btn btn-warning">Editar</a>
-                            <button class="btn btn-danger" @onclick=@(() => Delete(country))>Borrar</button>
+                            <button class="btn btn-danger" @onclick=@(() => DeleteAsync(country))>Borrar</button>
 
                         </td>
                         <td>
@@ -46,8 +44,6 @@
 </GenericList>
 
 
-
-
 @code {
 
 
@@ -55,16 +51,16 @@
 
     protected async override Task OnInitializedAsync()
     {
-        await Load();
+        await LoadAsync();
     }
 
-    private async Task Load()
+    private async Task LoadAsync()
     {
         var responseHppt = await repository.Get<List<Country>>("api/countries");
         Countries = responseHppt.Response!;
     }
 
-    private async Task Delete(Country country)
+    private async Task DeleteAsync(Country country)
     {
         var result = await sweetAlertService.FireAsync(new SweetAlertOptions
             {
@@ -85,7 +81,7 @@
 
         if (responseHTTP.Error)
         {
-            if (responseHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (responseHTTP.HttpResponseMessage.StatusCode ! == HttpStatusCode.NotFound)
             {
                 navigationManager.NavigateTo("/");
             }
@@ -97,7 +93,7 @@
         }
         else
         {
-            await Load();
+            await LoadAsync();
         }
     }
 

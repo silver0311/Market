@@ -43,7 +43,7 @@ namespace Market.API.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> Put(Country country)
+        public async Task<ActionResult> PutAsync(Country country)
         {
             _context.Update(country);
             await _context.SaveChangesAsync();

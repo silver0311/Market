@@ -27,9 +27,10 @@ else
 
         if (responseHTTP.Error)
         {
-            if (responseHTTP.HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (responseHTTP.HttpResponseMessage.StatusCode == HttpStatusCode.NotFound)
             {
                 navigationManager.NavigateTo("countries");
+
             }
             else
             {
@@ -51,16 +52,14 @@ else
         {
             var mensajeError = await responseHTTP.GetErrorMessageAsync();
             await sweetAlertService.FireAsync("Error", mensajeError, SweetAlertIcon.Error);
+            return;
         }
-        else
-        {
-            countryForm!.FormPostedSuccessfully = true;
-            navigationManager.NavigateTo("countries");
-        }
+        Return();
     }
 
     private void Return()
     {
+        countryForm!.FormPostedSuccessfully = true;
         navigationManager.NavigateTo("countries");
     }
 }
