@@ -43,7 +43,8 @@ namespace Market.API.Controllers
                 _context.Add(country);
                 await _context.SaveChangesAsync();
                 return Ok(country);
-            }catch (DbUpdateException dbUpdateException)
+            }
+            catch (DbUpdateException dbUpdateException)
             {
                 if (dbUpdateException.InnerException!.Message.Contains("duplicate"))
                 {
@@ -58,8 +59,6 @@ namespace Market.API.Controllers
             {
                 return BadRequest(exception.Message);
             }
-
-
 
         }
 

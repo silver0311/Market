@@ -5,7 +5,7 @@
 namespace Market.API.Migrations
 {
     /// <inheritdoc />
-    public partial class CountryDb : Migration
+    public partial class sdB1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

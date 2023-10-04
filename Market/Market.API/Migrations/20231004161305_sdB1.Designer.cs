@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Market.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230828205428_CountryDb")]
-    partial class CountryDb
+    [Migration("20231004161305_sdB1")]
+    partial class sdB1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
