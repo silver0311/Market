@@ -21,19 +21,25 @@
                 <tr>
                     <th></th>
                     <th>País</th>
+                    <th>Estados/Departamentos</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var country in Countries!)
                 {
                     <tr>
+                        
                         <td>
+                            @country.Name
+                        </td>
+                        <td>
+                            @country.StatesNumber
+                        </td>
+                        <td>
+                            <a href="/countries/details/@country.Id" class="btn btn-info">Detalles</a>
                             <a href="/countries/edit/@country.Id" class="btn btn-warning">Editar</a>
                             <button class="btn btn-danger" @onclick=@(() => DeleteAsync(country))>Borrar</button>
 
-                        </td>
-                        <td>
-                            @country.Name
                         </td>
                     </tr>
                 }
