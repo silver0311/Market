@@ -1,14 +1,17 @@
-﻿using Market.Shared.Entities;
+﻿using Market.API.Services;
+using Market.Shared.Entities;
 
 namespace Market.API.Data
 {
     public class SeedDb
     {
         private readonly DataContext _context;
+        private readonly IApiService _apiService;
 
-        public SeedDb(DataContext context)
+        public SeedDb(DataContext context, IApiService apiService)
         {
             _context = context;
+            _apiService = apiService;
         }
 
         public async Task SeedAsync()
