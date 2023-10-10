@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Market.Shared.Responses.CountryResponse
+namespace Market.Shared.Responses
 {
     public class StateResponse
     {
@@ -18,5 +18,4 @@ namespace Market.Shared.Responses.CountryResponse
         [JsonProperty("iso2")]
         public string? Iso2 { get; set; }
     }
-
 }

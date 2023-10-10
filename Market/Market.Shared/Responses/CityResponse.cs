@@ -5,19 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Market.Shared.Responses.CountryResponse
+namespace Market.Shared.Responses
 {
-    
-        public class CountryResponse
+    public class CityResponse
     {
         [JsonProperty("id")]
         public long Id { get; set; }
 
         [JsonProperty("name")]
         public string? Name { get; set; }
-
-        [JsonProperty("iso2")]
-        public string? Iso2 { get; set; }
     }
 
 }
